@@ -16,17 +16,32 @@ submit.addEventListener('submit', (e) => {
     <h1>subject: </h1>${fsubject.value}
     `;
 
-    Email.send({
-        SecureToken: "3c7f3bd1-7808-4cc1-9e10-1405bf944cbc", //add your token here
+    /*Email.send({
+        SecureToken: "b4994618-7125-4733-91db-baecb8046789", //add your token here
         To: 'ahmadbaba_@outlook.com',
         From: "ahmadadnanbaba@gmail.com",
         Subject: "This is the subject",
         Body: ebody
     }).then(
         message => alert(message)
+    );*/
+    Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "ahmadadnanbaba@gmail.com",
+        Password: "BDBA5212162031EBA4BB9EEE8F36C5F05CBC",
+        To: 'ahmadbaba_@outlook.com',
+        From: 'ahmadadnanbaba@gmail.com', // put a real email address that is verified
+        Port: '2525',
+        Subject: "This is the subject",
+        Body: "And this is the body"
+
+    }).then(
+        message => {
+            alert("mail sent successfully");
+            console.log(message);
+        }
     );
 
-    //
 
     /*function sendEmail() {
         Email.send({
