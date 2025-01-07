@@ -17,7 +17,7 @@ submit.addEventListener('submit', (e) => {
     `;
 
     Email.send({
-        SecureToken: "73ea80c4-d38c-49f3-9909-d901abae4b86", //add your token here
+        SecureToken: "3c7f3bd1-7808-4cc1-9e10-1405bf944cbc", //add your token here
         To: 'ahmadbaba_@outlook.com',
         From: "ahmadadnanbaba@gmail.com",
         Subject: "This is the subject",
@@ -25,6 +25,7 @@ submit.addEventListener('submit', (e) => {
     }).then(
         message => alert(message)
     );
+
 
 
     /*function sendEmail() {
